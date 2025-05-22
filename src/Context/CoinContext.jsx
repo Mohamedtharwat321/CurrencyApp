@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 
-export let coinContext = createContext(0);
+export let CoinContext = createContext(0);
 
 export default function CoinContextProvider(props) {
   const [allCurrency, setAllCurrency] = useState([]);
@@ -16,7 +16,7 @@ export default function CoinContextProvider(props) {
       method: "GET",
       headers: {
         accept: "application/json",
-        "x-cg-demo-api-key": "CG-eCNfwytvpz7PSNSQvF1YNX78	",
+        "x-cg-demo-api-key": "CG-eCNfwytvpz7PSNSQvF1YNX78",
       },
     };
 
@@ -33,7 +33,7 @@ export default function CoinContextProvider(props) {
     fetchAllcoins();
   }, [currency]);
   return (
-    <coinContext.Provider
+    <CoinContext.Provider
       value={{
         allCurrency,
         currency,
@@ -45,6 +45,6 @@ export default function CoinContextProvider(props) {
       }}
     >
       {props.children}
-    </coinContext.Provider>
+    </CoinContext.Provider>
   );
 }

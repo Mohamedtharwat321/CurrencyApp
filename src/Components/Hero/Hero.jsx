@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
 import "./Hero.css";
-import { coinContext } from "../../Context/Coincontext";
+import { CoinContext } from "../../Context/Coincontext";
 
 const Hero = () => {
-  const { input, setInput, allCurrency, setDisplayCoins} = useContext(coinContext);
+  const { input, setInput, allCurrency, setDisplayCoins } =
+    useContext(CoinContext);
   const inputHandler = (event) => {
     setInput(event.target.value);
-    if(event.target.value===""){
-      setDisplayCoins(allCurrency)
+    if (event.target.value === "") {
+      setDisplayCoins(allCurrency);
     }
   };
   const searchHandler = async (event) => {
@@ -15,7 +16,7 @@ const Hero = () => {
     const filteredCoins = await allCurrency.filter((item) =>
       item.name.toLowerCase().includes(input.toLowerCase())
     );
-    setDisplayCoins(filteredCoins)
+    setDisplayCoins(filteredCoins);
   };
   return (
     <div className="hero">
@@ -35,11 +36,9 @@ const Hero = () => {
           required
         />
         <datalist id="coinlist">
-         {
-          allCurrency.map((item,idx)=>(
-            <option key={idx} value={item.name}/>
-          ))
-         }
+          {allCurrency.map((item, idx) => (
+            <option key={idx} value={item.name} />
+          ))}
         </datalist>
         <button>Search</button>
       </form>

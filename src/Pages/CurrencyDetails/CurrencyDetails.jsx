@@ -3,12 +3,12 @@ import "./CurrencyDetails.css";
 import arrow from "../../assets/arrow_icon.png";
 import test from "../../assets/line-chart-example.svg";
 import { useParams } from "react-router-dom";
-import { coinContext } from "./../../Context/CoinContext";
 import Linechart from "../../Components/Linechart/Linechart";
+import { CoinContext } from "../../Context/Coincontext";
 
 const CurrencyDetails = () => {
   const { coinId } = useParams();
-  const { currency } = useContext(coinContext);
+  const { currency } = useContext(CoinContext);
   const [coinInfo, setCoinInfo] = useState();
   const [chartData, setChartData] = useState();
 
