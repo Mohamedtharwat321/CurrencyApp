@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import "./Hero.css";
-import { CoinContext } from "../../Context/Coincontext";
+import { CoinContext } from "../../Context/CoinContext";
 
 const Hero = () => {
   const { input, setInput, allCurrency, setDisplayCoins } =

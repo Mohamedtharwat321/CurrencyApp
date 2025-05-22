@@ -4,7 +4,7 @@ import arrow from "../../assets/arrow_icon.png";
 import test from "../../assets/line-chart-example.svg";
 import { useParams } from "react-router-dom";
 import Linechart from "../../Components/Linechart/Linechart";
-import { CoinContext } from "../../Context/Coincontext";
+import { CoinContext } from "../../Context/CoinContext";
 
 const CurrencyDetails = () => {
   const { coinId } = useParams();

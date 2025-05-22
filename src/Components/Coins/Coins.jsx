@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Coins.css";
 import arrow from "../../assets/arrow_icon.png";
 import { Link } from "react-router-dom";
-import { CoinContext } from "../../Context/Coincontext";
+import { CoinContext } from "../../Context/CoinContext";
 
 const Coins = () => {
   const { allCurrency, currency,displayCoins,setDisplayCoins} = useContext(CoinContext);
