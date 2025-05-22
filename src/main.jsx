@@ -7,10 +7,10 @@ import CoinContextProvider from "./Context/Coincontext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
     <CoinContextProvider>
-    <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </CoinContextProvider>
-    </BrowserRouter>
   </StrictMode>
 );
