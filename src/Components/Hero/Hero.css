@@ -1,0 +1,77 @@
+.hero{
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 0 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 22px;
+}
+.hero h1{
+    font-size: 60px;
+}
+.hero p{
+    width: 75%;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.hero form{
+    background-color: white;
+    padding: 8px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 80%;
+}
+.hero form input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    flex: 1;
+    padding-left: 10px;
+}
+.hero form button{
+    border: none;
+    outline: none;
+    background: #7927ff;
+    color: white;
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+@media (max-width:450px) {
+    .hero form input{
+        width: 100px;
+    }
+    .hero form button {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+    .hero p {
+        width: 90%;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    .hero h1 {
+        font-size: 57px;
+    }
+}
+@media (max-width: 370px) {
+    .hero h1 {
+        font-size: 52px;
+    }
+    .hero p {
+        width: 95%;
+        font-size: 14px;
+    }
+    .hero form button {
+        font-size: 13px;
+        padding: 10px 16px;
+    }
+}
